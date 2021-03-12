@@ -1,0 +1,40 @@
+.schedule {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    .time {
+        .item {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+    }
+    .day {
+        margin: 0 0.5em;
+        .item {
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.5em;
+        }
+        .class {
+            background: lightslategray;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .active {
+            background: mediumturquoise;
+        }
+    }
+}
+
+.header-schedule {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    div {
+        text-align: center;
+        padding: 1em;
+    }
+}

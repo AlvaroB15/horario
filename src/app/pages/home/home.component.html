@@ -1,0 +1,20 @@
+<div class="header-schedule">
+    <div class="time">
+        Horas
+    </div>
+    <div class="day" *ngFor="let item of dias">{{item}}</div>
+</div>
+<div class="schedule">
+    <div class="time">
+        <div class="item" *ngFor="let item of listaHoras">
+            {{item.hour>9?item.hour:'0'+item.hour}}:{{item.minute>9?item.minute:'0'+item.minute}}
+        </div>
+    </div>
+    <div class="day" *ngFor="let dia of listaDias">
+        <div class="item" *ngFor="let item of dia">
+            <div class="class" *ngFor="let p of item.programation" [ngClass]="{'active': p.type !== 0}" [ngStyle]="{'flex-grow':  p.volume}">
+                {{p.item ? p.item.nombreCurso : 'None'}} : {{ p.volume}}
+            </div>
+        </div>
+    </div>
+</div>
